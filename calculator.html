@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>calculator</title>
+    <style>
+        body{
+            text-align: center;
+            /* background-color: magenta; */
+        }
+    input{
+        border-radius:33px;
+        padding: 10px 30px;
+        line-height: 35px;
+        border-color: rgba(234, 174, 24, 0.973);
+        margin-top: 3%;
+        font-size:large;
+        
+    }
+    .button{
+        background-color:lightblue;
+        padding: 23px 30px;
+        border-radius: 43%;
+        cursor:pointer;
+        border-color:goldenrod;
+        font-size:xx-large;
+        box-shadow: purple;
+
+    }
+
+    .box{
+        /* background-color:blue;    */
+        /* width: auto; */
+        
+    }
+    </style>
+</head>
+<body>
+    <h1><bold>Calculator</bold></h1>
+    <input type="text" size="27%" placeholder="0" id="output-screen" >
+    <p></p>
+   
+    
+   
+<div class="box" >
+<div>
+    <div>
+        <button class="button" id="clear" onclick="myclear('C')">C</button>
+        <button class="button" id="myBtn" onclick="myFunction('/')">/</button>
+        <button class="button" id="myBtn" onclick="myFunction('*')">*</button>
+        <button class="button" id="myBtn" onclick="myFunction('%')">%</button>
+    </div>
+<div>
+        <button class="button" id="myBtn" onclick="myFunction(7)">7</button>
+        <button class="button"  id="myBtn" onclick="myFunction(8)">8</button>
+        <button class="button"  id="myBtn" onclick="myFunction(9)">9</button>
+        <button class="button"  id="myBtn" onclick="myFunction('+')">+</button>
+</div>
+<div>
+        <button class="button"  id="myBtn" onclick="myFunction(4)">4</button>
+        <button class="button"  id="myBtn" onclick="myFunction(5)">5</button>
+        <button class="button"  id="myBtn" onclick="myFunction(6)">6</button>
+        <button class="button"  id="myBtn" onclick="myFunction('-')">-</button>
+</div>
+<div>
+        <button class="button"  id="myBtn" onclick="myFunction(1)">1</button>
+        <button class="button"  id="myBtn" onclick="myFunction(2)">2</button>
+        <button class="button"  id="myBtn" onclick="myFunction(3)">3</button>
+        <button class="button"  id="myBtn" onclick="myFunction('(')"> ( </button>
+</div>
+<div>
+        <button class="button"  id="myBtn" onclick="myFunction(0)">0</button>
+        <button class="button"  id="myBtn" onclick="myFunction('.')" >.</button>
+        <button class="button"  id="myBtn" onclick="equalto('=')" >=</button>
+        <button class="button"  id="myBtn" onclick="myFunction(')')"> ) </button>
+
+</div>
+</div>
+<script>
+      let outputScreen = document.getElementById("output-screen");
+
+function myFunction(myBtn){
+    outputScreen.value += myBtn;
+}
+function equalto(){
+    outputScreen.value = eval(outputScreen.value)
+}
+function myclear(){
+         outputScreen.value = "";
+        }  
+
+</script>
+</body>
+</html>
